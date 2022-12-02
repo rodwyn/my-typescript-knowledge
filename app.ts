@@ -1,33 +1,73 @@
-// Funciones Básicas
-function sumar( a:number, b:number ):number{
-  return a + b;
+type Car = {
+  carroceria: string,
+  modelo: string,
+  antibalas: boolean,
+  pasajeros: number,
+  disparar?: () => void
 }
 
-const contar = ( heroes:string[] ):number => {
-  return heroes.length;
-}
+// Objetos
+const batimovil:Car = {
+  carroceria: "Negra",
+  modelo: "6x6",
+  antibalas: true,
+  pasajeros:4
+};
 
-const superHeroes: string[] = ["Flash", "Arrow", "Superman", "Linterna Verde"];
-contar(superHeroes);
-
-//Parametros por defecto
-const llamarBatman = ( llamar:boolean = false ):void => {
-  if( llamar ){
-    console.log("Batiseñal activada");
+const bumblebee:Car = {
+  carroceria: "Amarillo con negro",
+  modelo: "4x2",
+  antibalas: true,
+  pasajeros:4,
+  disparar(){ // El metodo disparar es opcional
+    console.log("Disparando");
   }
+};
+
+type Villian = {
+  nombre:string,
+  edad?: number,
+  mutante:boolean
+};
+// Villanos debe de ser un arreglo de objetos personalizados
+const villanos: Villian[] = [{
+  nombre:"Lex Luthor",
+  edad: 54,
+  mutante:false
+},{
+  nombre: "Erik Magnus Lehnsherr",
+  edad: 49,
+  mutante: true
+},{
+  nombre: "James Logan",
+  edad: undefined,
+  mutante: true
+}];
+
+// Multiples tipos
+// cree dos tipos, uno para charles y otro para apocalipsis
+type GoodGuy = {
+  poder:string,
+  estatura:number
+};
+
+type BadGuy = {
+  lider:boolean,
+  miembros: string[]
+};
+
+const charles:GoodGuy = {
+  poder:"psiquico",
+  estatura: 1.78
+};
+
+const apocalipsis:BadGuy = {
+  lider:true,
+  miembros: ["Magneto","Tormenta","Psylocke","Angel"]
 }
 
-llamarBatman();
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique: BadGuy | GoodGuy;
 
-// Rest?
-const unirheroes = ( ...personas:string[] ):string => {
-  return personas.join(", ");
-}
-
-
-// Tipo funcion
-const noHaceNada = ( numero:number , texto:string, booleano:boolean, arreglo: string[] ):void=> {}
-
-// Crear el tipo de funcion que acepte la funcion "noHaceNada"
-let noHaceNadaTampoco: (numero:number , texto:string, booleano:boolean, arreglo: string[]) => void;
-noHaceNadaTampoco  = noHaceNada
+mystique = charles;
+mystique = apocalipsis;
