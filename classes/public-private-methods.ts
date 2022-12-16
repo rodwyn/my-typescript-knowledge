@@ -23,6 +23,6 @@
 
   const antman: Avenger = new Avenger('Antman', 'Captain', 'Scott Lang');
 
-  console.log( antman.getBio() );
+  // console.log( antman.getBio() );
   
 })();

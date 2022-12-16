@@ -1,5 +1,5 @@
 (() => {
   let isSuperman: boolean = true;
 
-  console.log({isSuperman});
+  // console.log({isSuperman});
 })()

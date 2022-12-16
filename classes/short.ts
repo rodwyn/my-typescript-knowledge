@@ -11,6 +11,6 @@
 
   const antman: Avenger = new Avenger('Antman', 'Captain', 'Scott Lang');
 
-  console.log( antman);
+  // console.log( antman);
   
 })();

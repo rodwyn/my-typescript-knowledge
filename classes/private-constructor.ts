@@ -21,9 +21,9 @@
   const apocalypse2 = Apocalypse.callApocalypse();
   const apocalypse3 = Apocalypse.callApocalypse();
 
-  console.log( apocalypse1, apocalypse2, apocalypse3);
+  // console.log( apocalypse1, apocalypse2, apocalypse3);
   
   apocalypse2.changeName('Dark Phoenix');
 
-  console.log( apocalypse1, apocalypse2, apocalypse3);
+  // console.log( apocalypse1, apocalypse2, apocalypse3);
 })();

@@ -3,9 +3,9 @@
   const villians: number = 20;
 
   if (avengers < villians) {
-    console.log('We are in troubles!');
+    // console.log('We are in troubles!');
   }
   else {
-    console.log('We are saved!');
+    // console.log('We are saved!');
   }
 })();

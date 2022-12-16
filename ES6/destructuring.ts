@@ -12,7 +12,7 @@
   };
 
   const printAvenger = ({ ironman, ...rest }:Avengers):void => {
-    console.log( ironman, rest);
+    // console.log( ironman, rest);
   };
 
   printAvenger(avengers);

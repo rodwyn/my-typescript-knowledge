@@ -8,7 +8,7 @@
     }
   }
 
-  console.log(fullName('Tony'));
-  console.log(fullName('Tony', true));
-  console.log(fullName('Tony', true, 'Stark'));
+  // console.log(fullName('Tony'));
+  // console.log(fullName('Tony', true));
+  // console.log(fullName('Tony', true, 'Stark'));
 })();
